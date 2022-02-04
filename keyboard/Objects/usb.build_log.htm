@@ -1,0 +1,285 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: wonder xue, wonderxue, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.36.0.0
+Toolchain Path:  D:\MDK\core\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+C:\Users\33209\Desktop\usb\keyboard\usb.uvprojx
+Project File Date:  02/03/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'D:\MDK\core\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+compiling gpio.c...
+compiling usb_hid.c...
+compiling debug.c...
+compiling usart.c...
+compiling main.c...
+usb_app.c(60): warning: incompatible pointer types initializing 'USB_InterfaceDescriptor *' with an expression of type 'USB_ConfigurationDescriptor *' [-Wincompatible-pointer-types]
+    USB_InterfaceDescriptor *pinterface = pconfig + 1;
+                             ^            ~~~~~~~~~~~
+usb_app.c(61): warning: incompatible pointer types initializing 'USB_HIDDescriptor *' with an expression of type 'USB_InterfaceDescriptor *' [-Wincompatible-pointer-types]
+    USB_HIDDescriptor *phid = pinterface + 1;
+                       ^      ~~~~~~~~~~~~~~
+usb_app.c(62): warning: incompatible pointer types initializing 'USB_EndpointDescriptor *' with an expression of type 'USB_HIDDescriptor *' [-Wincompatible-pointer-types]
+    USB_EndpointDescriptor *pendpoint = phid + 1;
+                            ^           ~~~~~~~~
+usb_app.c(116): warning: expression result unused [-Wunused-value]
+            DEBUG("string 1\n");
+                  ^~~~~~~~~~~~
+usb_app.c(120): warning: expression result unused [-Wunused-value]
+            DEBUG("string 2\n");
+                  ^~~~~~~~~~~~
+usb_app.c(124): warning: expression result unused [-Wunused-value]
+            DEBUG("string 3\n");
+                  ^~~~~~~~~~~~
+usb_app.c(128): warning: expression result unused [-Wunused-value]
+            DEBUG("string 4\n");
+                  ^~~~~~~~~~~~
+usb_app.c(132): warning: expression result unused [-Wunused-value]
+            DEBUG("string 5\n");
+                  ^~~~~~~~~~~~
+usb_app.c(136): warning: expression result unused [-Wunused-value]
+            DEBUG("STR_%d\n", wValue & 0xff);
+                  ^~~~~~~~~~
+usb_app.c(136): warning: expression result unused [-Wunused-value]
+            DEBUG("STR_%d\n", wValue & 0xff);
+                              ~~~~~~ ^ ~~~~
+usb_app.c(144): warning: expression result unused [-Wunused-value]
+        DEBUG("123123\n");
+              ^~~~~~~~~~
+usb_app.c(150): warning: expression result unused [-Wunused-value]
+        DEBUG("IND%hd\n", wIndex);
+              ^~~~~~~~~~
+usb_app.c(150): warning: expression result unused [-Wunused-value]
+        DEBUG("IND%hd\n", wIndex);
+                          ^~~~~~
+usb_app.c(168): warning: expression result unused [-Wunused-value]
+    DEBUG("\n\n----1111-----\n\n");
+          ^~~~~~~~~~~~~~~~~~~~~~~
+usb_app.c(169): warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+usb_app.c(173): warning: incompatible pointer types initializing 'USB_DeviceDescriptor *' with an expression of type 'unsigned char [100]' [-Wincompatible-pointer-types]
+        .deviceDescriptor = writeBuffer,
+                            ^~~~~~~~~~~
+usb_app.c(174): warning: incompatible pointer types initializing 'USB_ConfigurationDescriptor *' with an expression of type 'unsigned char [100]' [-Wincompatible-pointer-types]
+        .configDescriptor = writeBuffer,
+                            ^~~~~~~~~~~
+usb_app.c(175): warning: incompatible pointer types initializing 'USB_StringDescriptor *' with an expression of type 'unsigned char [100]' [-Wincompatible-pointer-types]
+        .stringDescriptor = writeBuffer,
+                            ^~~~~~~~~~~
+usb_app.c(176): warning: incompatible pointer types initializing 'HID_ReportDescriptor *' with an expression of type 'unsigned char [100]' [-Wincompatible-pointer-types]
+        .reportDescriptor = writeBuffer,
+                            ^~~~~~~~~~~
+usb_app.c(187): warning: incompatible function pointer types initializing 'void (*)(unsigned char *, int)' with an expression of type 'char (unsigned char *, int)' [-Wincompatible-function-pointer-types]
+        .sendReport = sendReport};
+                      ^~~~~~~~~~
+20 warnings generated.
+compiling usb_app.c...
+usb_core.c(35): warning: incompatible integer to pointer conversion initializing 'const unsigned short *' with an expression of type 'int' [-Wint-conversion]
+    const unsigned short *pPMA = USB_PMA + addr * 2;
+                          ^      ~~~~~~~~~~~~~~~~~~
+usb_core.c(53): warning: incompatible integer to pointer conversion initializing 'unsigned short *' with an expression of type 'int' [-Wint-conversion]
+    unsigned short *pPMA = USB_PMA + addr * 2;
+                    ^      ~~~~~~~~~~~~~~~~~~
+usb_core.c(73): warning: incompatible pointer types assigning to 'const USB_DeviceRequest *' from 'unsigned char *' [-Wincompatible-pointer-types]
+    devReq = app.pread;
+           ^ ~~~~~~~~~
+usb_core.c(113): warning: result of comparison of constant -1 with expression of type 'unsigned char' is always false [-Wtautological-constant-out-of-range-compare]
+    if (app.dataToSend == -1)
+        ~~~~~~~~~~~~~~ ^  ~~
+usb_core.c(147): warning: expression result unused [-Wunused-value]
+    DEBUG("usbStandardGetStatus\n");
+          ^~~~~~~~~~~~~~~~~~~~~~~~
+usb_core.c(153): warning: expression result unused [-Wunused-value]
+    DEBUG("usbStandardGetDescriptor\n");
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+usb_core.c(172): warning: expression result unused [-Wunused-value]
+            DEBUG("ERR1\n");
+                  ^~~~~~~~
+usb_core.c(184): warning: expression result unused [-Wunused-value]
+        DEBUG("ERR2\n");
+              ^~~~~~~~
+usb_core.c(192): warning: expression result unused [-Wunused-value]
+    DEBUG("usbStandardGetConfiguration\n");
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+usb_core.c(198): warning: expression result unused [-Wunused-value]
+    DEBUG("usbStandardGetInterface\n");
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+usb_core.c(204): warning: expression result unused [-Wunused-value]
+    DEBUG("usbStandardSynchFrame\n");
+          ^~~~~~~~~~~~~~~~~~~~~~~~~
+usb_core.c(210): warning: expression result unused [-Wunused-value]
+    DEBUG("usbStandardClearFeature\n");
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+usb_core.c(217): warning: expression result unused [-Wunused-value]
+    DEBUG("usbStandardSetFeature\n");
+          ^~~~~~~~~~~~~~~~~~~~~~~~~
+usb_core.c(223): warning: expression result unused [-Wunused-value]
+    DEBUG("usbStandardSetAddress\n");
+          ^~~~~~~~~~~~~~~~~~~~~~~~~
+usb_core.c(231): warning: expression result unused [-Wunused-value]
+    DEBUG("usbStandardSetDescriptor\n");
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+usb_core.c(237): warning: expression result unused [-Wunused-value]
+    DEBUG("usbStandardSetConfiguration\n");
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+usb_core.c(244): warning: expression result unused [-Wunused-value]
+    DEBUG("usbStandardSetInterface\n");
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+usb_core.c(252): warning: expression result unused [-Wunused-value]
+    DEBUG("usbClassSetIdle\n");
+          ^~~~~~~~~~~~~~~~~~~
+usb_core.c(260): warning: expression result unused [-Wunused-value]
+    DEBUG("\n--SETUP--\n");
+          ^~~~~~~~~~~~~~~
+usb_core.c(290): warning: expression result unused [-Wunused-value]
+                    DEBUG("ERR3\n");
+                          ^~~~~~~~
+usb_core.c(299): warning: expression result unused [-Wunused-value]
+                DEBUG("ERR4\n");
+                      ^~~~~~~~
+usb_core.c(329): warning: expression result unused [-Wunused-value]
+                    DEBUG("ERR5\n");
+                          ^~~~~~~~
+usb_core.c(340): warning: expression result unused [-Wunused-value]
+                    DEBUG("ERR6\n");
+                          ^~~~~~~~
+usb_core.c(347): warning: expression result unused [-Wunused-value]
+                DEBUG("ERR7\n");
+                      ^~~~~~~~
+usb_core.c(355): warning: expression result unused [-Wunused-value]
+        DEBUG("no\n");
+              ^~~~~~
+usb_core.c(361): warning: expression result unused [-Wunused-value]
+    DEBUG("\n--EP%dOut--\n", epId);
+          ^~~~~~~~~~~~~~~~~
+usb_core.c(361): warning: expression result unused [-Wunused-value]
+    DEBUG("\n--EP%dOut--\n", epId);
+                             ^~~~
+usb_core.c(374): warning: expression result unused [-Wunused-value]
+            DEBUG("no\n");
+                  ^~~~~~
+usb_core.c(395): warning: expression result unused [-Wunused-value]
+            DEBUG("no\n");
+                  ^~~~~~
+usb_core.c(402): warning: expression result unused [-Wunused-value]
+    DEBUG("\n--EP%dIn--\n", epId);
+          ^~~~~~~~~~~~~~~~
+usb_core.c(402): warning: expression result unused [-Wunused-value]
+    DEBUG("\n--EP%dIn--\n", epId);
+                            ^~~~
+usb_core.c(412): warning: expression result unused [-Wunused-value]
+            DEBUG("ADDR SET\n");
+                  ^~~~~~~~~~~~
+usb_core.c(471): warning: expression result unused [-Wunused-value]
+    DEBUG("\n--\n");
+          ^~~~~~~~
+usb_core.c(487): warning: expression result unused [-Wunused-value]
+        DEBUG("correct\n");
+              ^~~~~~~~~~~
+usb_core.c(492): warning: expression result unused [-Wunused-value]
+        DEBUG("overflow\n");
+              ^~~~~~~~~~~~
+usb_core.c(497): warning: expression result unused [-Wunused-value]
+        DEBUG("error\n");
+              ^~~~~~~~~
+usb_core.c(502): warning: expression result unused [-Wunused-value]
+        DEBUG("wakeup\n");
+              ^~~~~~~~~~
+usb_core.c(507): warning: expression result unused [-Wunused-value]
+        DEBUG("susp\n");
+              ^~~~~~~~
+usb_core.c(512): warning: expression result unused [-Wunused-value]
+        DEBUG("reset\n");
+              ^~~~~~~~~
+usb_core.c(523): warning: expression result unused [-Wunused-value]
+        DEBUG("esof;");
+              ^~~~~~~
+40 warnings generated.
+compiling usb_core.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_gpio.c...
+compiling misc.c...
+assembling startup_stm32f10x_md.s...
+compiling stm32f10x_usart.c...
+compiling system_stm32f10x.c...
+linking...
+Program Size: Code=12090 RO-data=642 RW-data=160 ZI-data=1232  
+".\Objects\usb.axf" - 0 Error(s), 60 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+   * Component: Framework Version: 3.6.0
+   * Component: GPIO Version: 3.6.0
+   * Component: RCC Version: 3.6.0
+   * Component: USART Version: 3.6.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103C8
+  .\RTE\_Target_1
+  D:\MDK\package\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  D:\MDK\package\Keil\STM32F1xx_DFP\2.4.0\Device\Include
+  D:\MDK\package\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\system_stm32f10x.c
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
+
+   * Component: Keil::Device:StdPeriph Drivers:USART:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_usart.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_usart.c
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

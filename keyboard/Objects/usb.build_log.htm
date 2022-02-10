@@ -30,8 +30,8 @@ Rebuild target 'Target 1'
 compiling gpio.c...
 compiling usb_hid.c...
 compiling debug.c...
-compiling usart.c...
 compiling main.c...
+compiling usart.c...
 usb_app.c(60): warning: incompatible pointer types initializing 'USB_InterfaceDescriptor *' with an expression of type 'USB_ConfigurationDescriptor *' [-Wincompatible-pointer-types]
     USB_InterfaceDescriptor *pinterface = pconfig + 1;
                              ^            ~~~~~~~~~~~
@@ -216,10 +216,10 @@ usb_core.c(523): warning: expression result unused [-Wunused-value]
               ^~~~~~~
 40 warnings generated.
 compiling usb_core.c...
-compiling stm32f10x_rcc.c...
-compiling stm32f10x_gpio.c...
 compiling misc.c...
+compiling stm32f10x_gpio.c...
 assembling startup_stm32f10x_md.s...
+compiling stm32f10x_rcc.c...
 compiling stm32f10x_usart.c...
 compiling system_stm32f10x.c...
 linking...
@@ -256,17 +256,17 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.5.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\system_stm32f10x.c
       Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Source file:   Device\Source\system_stm32f10x.c
       Include file:  RTE_Driver\Config\RTE_Device.h
       Source file:   Device\Source\ARM\STM32F1xx_OPT.s
 
    * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
       Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
       Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
       Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
-      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
-      Source file:   Device\StdPeriph_Driver\src\misc.c
 
    * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
@@ -277,9 +277,9 @@ Package Vendor: Keil
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
 
    * Component: Keil::Device:StdPeriph Drivers:USART:3.6.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_usart.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_usart.c
-Build Time Elapsed:  00:00:03
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_usart.h
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

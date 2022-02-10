@@ -1,7 +1,7 @@
 #pragma once
 #include <stdio.h>
 
-//#define DEBUG_EN
+#define DEBUG_EN
 
 #ifdef DEBUG_EN
 #define DEBUG    printf

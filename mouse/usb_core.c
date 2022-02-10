@@ -476,7 +476,7 @@ void USB_LP_CAN1_RX0_IRQHandler()
     }
     if (USB->ISTR & (1 << 11))
     {
-        DEBUG("susp\n");
+        DEBUG("susp;");
         USB->ISTR &= ~(1 << 11);
     }
     if (USB->ISTR & (1 << 10))
@@ -487,7 +487,7 @@ void USB_LP_CAN1_RX0_IRQHandler()
     }
     if (USB->ISTR & (1 << 9))
     {
-        //DEBUG("sof;");
+        DEBUG("sof;");
         USB->ISTR &= ~(1 << 9);
     }
     if (USB->ISTR & (1 << 8))

@@ -43,8 +43,8 @@ int main()
 			if (flag)
 			{
 				flag = 0;
-				temp[1] = 20 * xy[i * 2];
-				temp[2] = 20 * xy[i * 2 + 1];
+				temp[1] = 1 * xy[i * 2];
+				temp[2] = 1 * xy[i * 2 + 1];
 				app.endpoint1->sendReport(temp, 4);
 				i++;
 			}
